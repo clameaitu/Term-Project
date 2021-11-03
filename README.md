@@ -1,32 +1,43 @@
-# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
-Autor/a: \<nombre del autor\>   uvus:\<uvus del autor\>
+# Progamming fundamentals 1st term project (Year  \<21\>/\<22\>)
+Author: Claudia Meana Iturri   uvus:\ clameaitu
 
-Aquí debes añadir la descripción del dataset y un enunciado del dominio del proyecto.
+This project's objective is to analyze the top 1000 manga’s ranked by myAnimelist dataset posted on Kaggle which can be downloaded using the following URL (https://www.kaggle.com/astronautelvis/top-1000-ranked-mangas-by-myanimelist?select=top_1000.csv). This dataset originally had 17 columns of which none where of date type. As such, I have chosen 14 out of the 17 (one of them was modified to be type float) and have added another column with the randomly generated dates corresponding to the date when the manga was published.
 
+## Folder structure for the project
 
-## Estructura de las carpetas del proyecto
-
-* **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
-  * **\<modulo1.py\>**: Describe aquí el módulo principal.
-  * **\<modulo1_test.py\>**: Describe aquí el módulo de pruebas.
-  * **\<modulo2.py\>**: Añade descripciones para el resto de módulos que pueda tener tu proyecto. Por ejemplo, sería conveniente tener un módulo separado con funciones genéricas para dibujar gráficas y/o otro con funciones genéricas de conversión de tipos. 
+* **/src**: Contains the different python modules that make up the project.
+  * **\<manga.py\>**: Contains the functions to analyze the manga data.
+  * **\<manga_test.py\>**: Contains the test functions for the module manga.py.
+  * **\<manga_dataconversion.py\>**: Contains the data conversion functions
+  * **\<manga_graph.py\>**:Contains the functions to draw graphs
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
-    * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
+    * **\<manga_original.csv\>**: The original data file
+    * **\<manga_data.csv\>**: Data file with the manga information
     
-## Estructura del *dataset*
+## *Dataset* Structure
 
-Aquí debes describir la estructura del dataset explicando qué representan los datos que contiene y la descripción de cada una de las columnas.
+This data set is made out of  \<15\> columns, with the following description:
 
-El dataset está compuesto por \<N\> columnas, con la siguiente descripción:
+* **\<title>**: of type \<str\>, the name of the manga
+* **\<other_title>**: of type \<str\>, other name for the manga
+* **\<status>**: of type \<str\>, whether the manga has finished, is still being published or is on hiatus
+* **\<volumes>**: of type \<int\>, the number of volumes the manga has
+* **\<chapters>**: of type \<int\>,  the number of chapters the manga has
+* **\<publishing>**: of type \<boolean\>, whether the manga is still being published or not 
+* **\<rank>**: of type \<int\>, the rank according to the scores of the manga
+* **\<score>**: of type \<float\>, the mean of the score people have rated the manga out of 10
+* **\<scored_by>**: of type \<int\>, the number of people that have participated in scoring the manga
+* **\<popularity>**: of type \<int\>, a ramking of the most popular manga based on the number of members and favourites of the manga
+* **\<members>**: of type \<int\>, the number of people that are following the manga 
+* **\<favourites>**: of type \<int\>, the number of people that have favourited the manga 
+* **\<synopsis>**: of type \<str\>, brief summary of the manga
+* **\<publish_date>**: of type \<str\>, the date the manga was published
+* **\<genre>**: of type \<str\>, a list of genres each manga belongs to
 
-* **\<columna 1>**: de tipo \<tipo\>, representa....
-* **\<columna 2>**: de tipo \<tipo\>, representa....
-....
 
 ## Tipos implementados
 
-Descrbe aquí la o las namedtuple que defines en tu proyecto.
+Describe aquí la o las namedtuple que defines en tu proyecto.
 
 ## Funciones implementadas
 Añade aquí descripciones genéricas de las funciones, que luego debes acompañar con comentarios de tipo documentación en el código
