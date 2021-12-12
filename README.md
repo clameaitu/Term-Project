@@ -19,7 +19,6 @@ This project's objective is to analyze the top 1000 manga’s ranked by myAnimel
 This data set is made out of  \<15\> columns, with the following description:
 
 * **\<title>**: of type \<str\>, the name of the manga
-* **\<other_title>**: of type \<str\>, other name for the manga
 * **\<status>**: of type \<str\>, whether the manga has finished, is still being published or is on hiatus
 * **\<volumes>**: of type \<int\>, the number of volumes the manga has
 * **\<chapters>**: of type \<int\>,  the number of chapters the manga has
@@ -35,26 +34,36 @@ This data set is made out of  \<15\> columns, with the following description:
 * **\<genre>**: of type \<str\>, a list of genres each manga belongs to
 
 
-## Tipos implementados
+## Implemented types
 
-Describe aquí la o las namedtuple que defines en tu proyecto.
+To work with the data in the dataset the following tupple was made:
 
-## Funciones implementadas
-Añade aquí descripciones genéricas de las funciones, que luego debes acompañar con comentarios de tipo documentación en el código
+manga = namedtuple('manga', 'title, status, volumes, chapters, publishing, rank, score, scored_by, popularity, members, favourites, synopsis, publish_date, genre')
 
-### \<modulo 1\>
+with the following types:
 
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
-* ...
+manga(str, str, int, boolean, int, int, int, int, int, int, str, datetime.date, list)
 
-### \<test modulo 1\>
+## Implemented Functions
+The following functions were implemented in the project:
+
+### \<Module manga\>
+
+* **<read_manga>**: Reads the file and changes the format of the str to the correct one for the project
+* **<filter_nonpublishing>**: Given the mangas, give back a list of tupples with the title, status, volumes and chapters of FALSE publishing mangas
+* **<calculate_chapters_per_volume>**: Given the mangas, give back a list of tupples with the title, volumes, chapters and how many chapters pero volume (the mangas that are being published don't have a fixed number of chapters and volumes so we filtered those out earlier)
+* **<best_scoring_by_more_than_n_people_manga>**: Given the mangas and a value n, give back the the list of tupples ordered by the best score with a minimun number of scored_by
+* **<obtain_the_n_most_favourited_manga_by_status>**: Given the mangas, the status and the the number of elements of the list, n. Give back a list of the tupples ordered by favourites within the status chosen and only show the n first elements.
+* **<group_genre_by_year>**: Given the mangas, create a dicctionary with the key being the year and for each we will add the genres of the mangas published in that year
+
+
+### \<Module manga_test\>
 
 * **<test funcion 1>**: Descripción de las pruebas realizadas a la función 1.
 * **<test funcion 2>**: Descripción de las pruebas realizadas a la función 2.
 * ...
 * 
-### \<modulo 2\>
+### \<Module graph\>
 
 * **<funcion 1>**: Descripción de la función 1.
 * **<funcion 2>**: Descripción de la función 2.
