@@ -74,6 +74,7 @@ The following functions were implemented in the project:
 * **<test_list_suicide_increment>**: Testing list_suicide_increment
 * **<test_plt_show_suicides_per_year>**: Showing plt_show_suicides_per_year
 
+![graph](https://user-images.githubusercontent.com/93334287/147994301-a6fc4d47-6def-45f8-a4ae-ba54953027bc.png)
 
 ### \<Module suicide_parse\>
 
