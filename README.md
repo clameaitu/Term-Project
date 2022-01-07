@@ -6,11 +6,11 @@ This project's objective is to analyze the Suicide Rates Overview 1985 to 2016 d
 ## Folder structure for the project
 
 * **/src**: Contains the different python modules that make up the project.
-  * **\<suicide.py\>**: Contains the functions to analyze the manga data.
-  * **\<suicide_test.py\>**: Contains the test functions for the module manga.py.
+  * **\<suicide.py\>**: Contains the functions to analyze the suicide data.
+  * **\<suicide_test.py\>**: Contains the test functions for the module suicide.py.
   * **\<suicide_parse.py\>**: Contains the data conversion functions
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<suicide_data.csv\>**: Data file with the manga information
+    * **\<suicide_data.csv\>**: Data file with the suicide information
     
 ## *Dataset* Structure
 
@@ -41,7 +41,7 @@ data(str, datetime.date, boolean, str, int, int, int, float, int, str)
 ## Implemented Functions
 The following functions were implemented in the project:
 
-### \<Module manga\>
+### \<Module suicide\>
 
 * **<read_files>**: Reads the file and changes the format of the str to the correct one for the project.
 * **<list_filter_by_country>**: Given the dataset and a parameter country, filters the dataset for only the countries indicated by the parameter country, giving back said list of tupples.
@@ -60,7 +60,7 @@ The following functions were implemented in the project:
 * **<plt_show_suicides_per_year>**: Given the dataset, shows a graph with the x axis being the years and the y axis being the number of suicides in that year.
 
 
-### \<Module manga_test\>
+### \<Module suicide_test\>
 
 * **<test_read_files>**: Testing read_files
 * **<test_list_filter_by_country>**: Testing list_filter_by_country
