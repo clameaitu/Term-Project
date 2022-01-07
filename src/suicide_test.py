@@ -7,8 +7,8 @@ def test_read_files():
     print("These are the last 3 data: ", data[-3:])
 
 def test_list_filter_by_country():
-    country = input("Introduce a country: ")
-    print(list_filter_by_country(data,country)[:3])
+    country = "Albania"
+    print("The dataset filtered by the country Albania: ", list_filter_by_country(data,country)[:3])
 
 def test_total_num_countries():
     print("The total number of countries in the dataset: ", total_num_countries(data))
